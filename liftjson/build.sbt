@@ -15,16 +15,16 @@ libraryDependencies ++= Seq(
 // once it becomes available, delete these additional rules
 
 libraryDependencies --= {
-  if (scalaVersion.value != "2.13.0-M5") Nil else Seq(
+  if (scalaVersion.value != "2.13.0-RC2") Nil else Seq(
     "net.liftweb" %% "lift-json" % Common.liftVersion,
   )
 }
 
 excludeFilter in unmanagedSources := {
   val default = (excludeFilter in unmanagedSources).value
-  if (scalaVersion.value == "2.13.0-M5") default || "*.scala" else default
+  if (scalaVersion.value == "2.13.0-RC2") default || "*.scala" else default
 }
 
 publishArtifact := {
-  scalaVersion.value != "2.13.0-M5"
+  scalaVersion.value != "2.13.0-RC2"
 }

@@ -11,3 +11,8 @@ enablePlugins(BuildInfoPlugin)
 buildInfoKeys := Seq[BuildInfoKey](version)
 
 buildInfoPackage := "dispatch"
+
+unmanagedSourceDirectories in Test := {
+  val old = (unmanagedSourceDirectories in Test).value
+  if (scalaVersion.value == "2.13.0-RC2") Nil else old
+}
