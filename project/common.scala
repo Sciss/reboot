@@ -20,7 +20,7 @@ object Common {
 
   val testSettings:Seq[Setting[_]] = Seq(
     testOptions in Test ++= {
-      if (scalaVersion.value.startsWith("2.13.0-RC")) Nil else Seq(
+      if (scalaVersion.value == "2.13.0") Nil else Seq(
         Tests.Cleanup { loader =>
           val c = loader.loadClass("unfiltered.spec.Cleanup$")
           c.getMethod("cleanup").invoke(c.getField("MODULE$").get(c))
@@ -32,7 +32,7 @@ object Common {
   val settings: Seq[Setting[_]] = Seq(
     version := Common.projectVersion,
 
-    crossScalaVersions := Seq("2.11.12", "2.12.8", "2.13.0-RC3"),
+    crossScalaVersions := Seq("2.11.12", "2.12.8", "2.13.0"),
 
     scalaVersion := defaultScalaVersion,
 

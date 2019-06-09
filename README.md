@@ -1,7 +1,7 @@
-__Note:__ This branch is a fork off mainline dispatch/reboot, so I can publish an artifact for Scala 2.13.0(-RC). I have given the artifact a new organization and a new version to avoid confusion.
+__Note:__ This branch is a fork off mainline dispatch/reboot, so I can publish an artifact for Scala 2.13. I have given the artifact a new organization and a new version to avoid confusion.
 These artifacts are published as
 
-    "de.sciss" %% "dispatch-<suffix>" % "0.1.0"
+    "de.sciss" %% "dispatch-<suffix>" % "0.1.1"
 
 where suffix is as usual, `core`, `all` etc.
 
