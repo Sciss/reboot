@@ -3,7 +3,7 @@ import sbt._
 object Common {
   import Keys._
 
-  val defaultScalaVersion     = "2.12.8"
+  val defaultScalaVersion     = "2.13.4"
 //  val projectVersion          = "1.1.0-SNAPSHOT"
   val projectVersion          = "0.1.1"     // temporarily use our own
 
@@ -32,7 +32,7 @@ object Common {
   val settings: Seq[Setting[_]] = Seq(
     version := Common.projectVersion,
 
-    crossScalaVersions := Seq("2.11.12", "2.12.8", "2.13.0"),
+    crossScalaVersions := Seq("3.0.0-M2", "2.13.4", "2.12.12"),
 
     scalaVersion := defaultScalaVersion,
 
